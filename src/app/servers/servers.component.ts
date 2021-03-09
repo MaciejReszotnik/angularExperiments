@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server has been created';
   private toggle = false;
+  public serverName = '';
 
   constructor() {
     setTimeout(() => {
@@ -22,12 +23,14 @@ export class ServersComponent implements OnInit {
   }
 
   public onCreateServer(): void {
-    if (!this.toggle) {
-      this.serverCreationStatus = 'Server has been created';
-    } else {
-      this.serverCreationStatus = 'No server has been created';
-    }
-    this.toggle = !this.toggle;
+
+    this.serverCreationStatus = 'Server has been created. Its name is: ' + this.serverName;
+
+  }
+
+  public onUpdateServerName(event: any): void {
+    console.log(event);
+    this.serverName = (event.target as HTMLInputElement).value;
   }
 
 }

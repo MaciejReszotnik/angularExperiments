@@ -1,0 +1,5 @@
+<label>User: </label>
+<input type="text" class="form-field" [(ngModel)]="userName" />
+
+<p>New user: {{userName}}</p>
+<button class="btn" (click)="onUsernameReset($event)" [disabled]="isNamefieldEmpty()">Reset name</button>

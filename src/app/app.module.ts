@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessPopupComponent } from './success/success-popup.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SuccessPopupComponent } from './success/success-popup.component';
     ServerComponent,
     ServersComponent,
     SuccessPopupComponent,
-    WarningComponent
+    WarningComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
