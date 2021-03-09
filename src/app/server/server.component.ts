@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-server',
@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
 })
 
 export class ServerComponent {
+    serverId = 10;
+    serverStatus = 'offline';
 
+    public getServerStatus(): string {
+        return this.serverStatus;
+    }
 }
