@@ -1,2 +1,2 @@
 <p>The server component</p>
-<p>Server has id: {{serverId}} and is: {{getServerStatus()}} </p>
+<p [ngClass]="[serverStatus === 'online' ? 'alert-success' : 'alert-danger']">Server has id: {{serverId}} and is: {{getServerStatus()}} </p>
