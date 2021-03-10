@@ -9,7 +9,7 @@ export class ServersComponent implements OnInit {
 
   allowNewServer = false;
   serverCreationStatus = 'No server has been created';
-  private toggle = false;
+  public toggleServerCreatedMessage = false;
   public serverName = '';
 
   constructor() {
@@ -23,9 +23,8 @@ export class ServersComponent implements OnInit {
   }
 
   public onCreateServer(): void {
-
+    this.toggleServerCreatedMessage = true;
     this.serverCreationStatus = 'Server has been created. Its name is: ' + this.serverName;
-
   }
 
   public onUpdateServerName(event: any): void {

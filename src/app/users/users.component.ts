@@ -21,7 +21,7 @@ export class UsersComponent implements OnInit {
     return false;
   }
 
-  public onUsernameReset($event): void {
+  public onUsernameReset(): void {
     this.userName = '';
   }
 
